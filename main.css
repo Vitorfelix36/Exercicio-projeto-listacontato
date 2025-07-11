@@ -1,76 +1,89 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    padding: 40px;
+header {
+    background-color: #5f27cd;
+    color: #fff;
+    padding: 16px 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-bottom: 16px solid #341f97;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
-h2 {
-    color: #333;
-}
+header button {
+    margin-left: 16px;
+}   
 
 form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+background-color: #c8d6e5;
+padding: 24px 0;
+text-align: center;
+display: none;
 }
 
-input[type="text"],
-input[type="tel"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-    width: 200px;
+form h2 {
+    margin-bottom: 16px;
+
+}
+
+input, button {
+    padding: 8px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #af4c4c;
-    color: white;
+    background-color: #009432;
     border: none;
-    border-radius: 8px;
-    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #a04545;
+
+#botao-cancelar {
+    background-color: #e84118;
 }
 
-table {
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none;
+    position: relative;
+    max-height: 280px;
+    overflow-y: hidden; /* Esconde o conteúdo que ultrapassa a altura */
+}
+
+ul li img {
     width: 100%;
-    max-width: 600px;
-    border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
+    height: 100%;
 }
 
-th, td {
-    padding: 15px;
-    text-align: left;
+.overlay-imagem-link {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .5s; /* Transição suave para a opacidade */
 }
 
-th {
-    background-color: #af4c4c;
-    color: white;
+.overlay-imagem-link a {
+    color: #fff;
+    text-decoration: none; /* Link sem sublinhado*/
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+ul li:hover .overlay-imagem-link {
+    opacity: 1; /* Exibe o overlay ao passar o mouse */
 }
